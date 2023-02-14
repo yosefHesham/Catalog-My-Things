@@ -32,8 +32,8 @@ class Item
   end
 
   def move_to_archive()
-    if can_be_archived?
-      self.archived = true
-    end
+    return unless can_be_archived?
+
+    self.archived = true
   end
 end

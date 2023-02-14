@@ -27,7 +27,7 @@ class Main
 
   def process_options(option)
     exit if option == '13'
-    
+
     if options.key?(option)
     # call method
     else
