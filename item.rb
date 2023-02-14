@@ -28,10 +28,12 @@ class Item
   end
 
   def can_be_archived?()
-    # #todo
+    Time.now.year - published_date.year > 10
   end
 
   def move_to_archive()
-    # #todo
+    return unless can_be_archived?
+
+    self.archived = true
   end
 end
