@@ -10,7 +10,6 @@ class GamesManager
   end
 
   def list_all_games
-    puts @games
     puts 'This is all the games we have : '
     @games.each_with_index do |game, index|
       puts "#{index + 1}. multiplayer: #{game.multiplayer} - last_played: #{game.last_played_at}"
