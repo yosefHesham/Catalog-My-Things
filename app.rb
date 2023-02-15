@@ -1,6 +1,6 @@
 require './games/game'
 require './games/game_manager'
-require './author/author_manager'
+require './authors/author_manager'
 
 class App
   def initialize
