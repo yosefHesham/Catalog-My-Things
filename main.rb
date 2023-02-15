@@ -1,4 +1,10 @@
+require './app'
+
 class Main
+  def initialize
+    @app = App.new
+  end
+
   def run
     options = {
       '1' => 'List all books',
@@ -16,23 +22,14 @@ class Main
       '13' => 'exit'
     }
 
-    puts ' '
     puts 'Please select one of the following options:'
     options.each { |key, value| puts "#{key} - #{value.to_s.capitalize.tr('_', ' ')}" }
 
     option = gets.chomp
 
-    process_options(option)
-  end
+    @app.process_option(option)
 
-  def process_options(option)
-    exit if option == '13'
-
-    if options.key?(option)
-    # call method
-    else
-      puts 'Invalid option, please try again.'
-    end
+    run
   end
 end
 
