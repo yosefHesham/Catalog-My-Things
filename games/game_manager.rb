@@ -22,8 +22,8 @@ class GamesManager
     puts 'Adding new game'
     print 'publish_date yyyy-mm-dd: '
     publish_date = gets.chomp
-    print 'multiplayer : '
-    multiplayer = gets.chomp
+    print 'multiplayer (Y/N): '
+    multiplayer = gets.chomp == 'y'
     print 'last_played_date yyyy-mm-dd: '
     last_played_at = gets.chomp
 
