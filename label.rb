@@ -1,4 +1,4 @@
-class Label 
+class Label
   attr_accessor :color, :title
   attr_reader :id, :items
 
@@ -10,6 +10,7 @@ class Label
   end
 
   def add_item(item)
+    item.label = self
     @items << item
   end
 end
