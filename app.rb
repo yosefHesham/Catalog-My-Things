@@ -12,7 +12,7 @@ class App
 
   def process_option(option)
     options = {
-      '1' => proc {@books.list_all_books},
+      '1' => proc { @books.list_all_books },
       '2' => proc {},
       '3' => proc {},
       '4' => proc { @games.list_all_games },

@@ -2,11 +2,15 @@ require_relative 'book'
 
 class BookManager
   def initialize()
-    @books = []
+    @storage = Storage.new
+
+    @books = @storage.load_data('books')
   end
 
   def list_all_books
-    @books.each_with_index { |book, index| puts " #{index + 1}- ID: #{book.id}, Publisher: #{book.publisher}, cover_state: #{book.cover_state}" }
+    @books.each_with_index do |book, index|
+      puts " #{index + 1}- ID: #{book.id}, Publisher: #{book.publisher}, cover_state: #{book.cover_state}"
+    end
   end
 
   def add_book()
@@ -19,5 +23,6 @@ class BookManager
     publish_date = gets.chomp
     book = Book.new(publisher, cover_state, publish_date)
     @books << book
+    @storage.save_data('books', @books)
   end
 end
