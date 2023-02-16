@@ -9,7 +9,7 @@ class Item
 
   def label=(label)
     @label = label
-    label.items.push(self) unless label.item.include?(self)
+    label.items.push(self) unless label.items.include?(self)
   end
 
   def author=(author)
