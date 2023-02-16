@@ -27,7 +27,7 @@ class Storage
   def load_albums
     if File.exist?('./music_albums.json')
       file = File.open('./music_albums.json')
-  
+
       if File.empty?('./music_albums.json')
         puts 'Please add new album'
       else
@@ -37,30 +37,30 @@ class Storage
           @albums << album
         end
       end
-  
+
       file.close
     else
       puts 'This file dont exits'
     end
   end
-  
+
   def save_album(name, publish_date, on_spotify)
     obj = {
       name: name,
       publish_date: publish_date,
       on_spotify: on_spotify
     }
-  
+
     if File.exist?('./music_albums.json')
       file = File.open('./music_albums.json')
-      if file.size.zero?
+      if file.empty?
         album = [obj]
       else
         album = JSON.parse(File.read('./music_albums.json'))
         album << obj
       end
       file.close
-  
+
       myfile = File.open('./music_albums.json', 'w')
       myfile.write(JSON.pretty_generate(album))
       myfile.close
@@ -68,11 +68,11 @@ class Storage
       puts 'This file dont exist'
     end
   end
-  
+
   def load_genres
     if File.exist?('./genres.json')
       file = File.open('./genres.json')
-  
+
       if File.empty?('./genres.json')
         'Please add new music'
       else
@@ -82,28 +82,28 @@ class Storage
           @genres << genre
         end
       end
-  
+
       file.close
     else
       puts 'This file dont exits'
     end
   end
-  
+
   def save_genre(name)
     obj = { name: name }
-  
+
     if File.exist?('./genres.json')
       file = File.open('./genres.json')
-  
-      if file.size.zero?
+
+      if file.empty?
         genre = [obj]
       else
         genre = JSON.parse(File.read('./genres.json'))
         genre << obj
       end
-  
+
       file.close
-  
+
       myfile = File.open('./genres.json', 'w')
       myfile.write(JSON.pretty_generate(genre))
       myfile.close
@@ -111,7 +111,7 @@ class Storage
       puts 'This file dont exist'
     end
   end
-  
+
   def add_album
     print 'Music name: '
     name = gets.chomp
@@ -129,17 +129,17 @@ class Storage
     else
       puts 'Invalid option \n'
     end
-  
+
     album = MusicAlbum.new(name, publish_date, on_spotify: spotify)
     @albums.push(album)
     save_album(name, publish_date, spotify)
-  
+
     genre = Genre.new(g_name)
     @genres.push(genre)
     save_genre(g_name)
     puts 'Music Added successfully'
   end
-  
+
   def list_albums
     puts ''
     puts 'List of all music albums:'
@@ -152,7 +152,7 @@ class Storage
       puts "Song name: #{album.name},\nPublished date: #{album.publish_date},\nOn Spotify: #{album.on_spotify}\n\n"
     end
   end
-  
+
   def list_genres
     puts ''
     puts 'List of all genres:'
@@ -167,5 +167,3 @@ class Storage
     puts ''
   end
 end
-
-
