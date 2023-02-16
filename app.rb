@@ -1,8 +1,8 @@
 require './games/game'
 require './games/game_manager'
 require './authors/author_manager'
-require './genre'
-require './music_album'
+require './music/genre'
+require './music/music_album'
 require_relative './storage'
 
 class App

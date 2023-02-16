@@ -1,17 +1,27 @@
 [
-    {
-      "name": "lolipop",
-      "publish_date": "2010-02-08",
-      "on_spotify": true
-    },
-    {
-      "name": "love me for ever",
-      "publish_date": "2008-08-08",
-      "on_spotify": false
-    },
-    {
-      "name": "brahim music",
-      "publish_date": "2020-09-09",
-      "on_spotify": true
-    }
-  ]
+  {
+    "name": "lolipop",
+    "publish_date": "2010-02-08",
+    "on_spotify": true
+  },
+  {
+    "name": "love me for ever",
+    "publish_date": "2008-08-08",
+    "on_spotify": false
+  },
+  {
+    "name": "gospel music",
+    "publish_date": "2020-09-09",
+    "on_spotify": true
+  },
+  {
+    "name": "sing",
+    "publish_date": "2020-05-04",
+    "on_spotify": false
+  },
+  {
+    "name": "halleluja",
+    "publish_date": "2021-06-15",
+    "on_spotify": false
+  }
+]

@@ -1,9 +1,17 @@
-require_relative 'music_album'
-require_relative './genre'
+require_relative './music/music_album'
+require_relative './music/genre'
+require 'date'
 require 'json'
 
 class Storage
   attr_reader :albums, :genres
+
+  def initialize
+    @albums = []
+    @genres = []
+    load_albums
+    load_genres
+  end
 
   def save_data(class_name, object)
     File.write("#{class_name}.json", JSON.dump(object))
@@ -15,6 +23,7 @@ class Storage
     file_data = File.read("#{class_name}.json")
     JSON.parse(file_data, create_additions: true)
   end
+
   def load_albums
     if File.exist?('./music_albums.json')
       file = File.open('./music_albums.json')
@@ -108,9 +117,9 @@ class Storage
     name = gets.chomp
     print 'Genre: '
     g_name = gets.chomp
-    print 'Published date: '
+    print 'Published date: [YYYY-MM-DD] '
     publish_date = gets.chomp
-    print 'Music is on Spotify? [Y/N]'
+    print 'Music is on Spotify? [Y/N] '
     spotify = gets.chomp.upcase
     case spotify
     when 'Y'
