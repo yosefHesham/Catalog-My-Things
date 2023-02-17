@@ -38,5 +38,20 @@
     "name": "live",
     "publish_date": "2020-11-11",
     "on_spotify": true
+  },
+  {
+    "name": "play",
+    "publish_date": "2020-02-20",
+    "on_spotify": false
+  },
+  {
+    "name": "loud",
+    "publish_date": "2020-02-21",
+    "on_spotify": false
+  },
+  {
+    "name": "praise",
+    "publish_date": "2000-09-19",
+    "on_spotify": true
   }
 ]
