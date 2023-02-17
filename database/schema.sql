@@ -45,6 +45,8 @@ CREATE TABLE Music_Album(
   on_spotify BOOLEAN,
   item_id INT,
   CONSTRAINT item_fk FOREIGN KEY (item_id) REFERENCES Items (id)
+);
+
 CREATE TABLE book(
   ID SERIAL PRIMARY KEY,
   publish_date DATE NOT NULL,
