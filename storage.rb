@@ -95,7 +95,7 @@ class Storage
     if File.exist?('./genres.json')
       file = File.open('./genres.json')
 
-      if file.size.zero?
+      if file.empty?
         genre = [obj]
       else
         genre = JSON.parse(File.read('./genres.json'))
