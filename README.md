@@ -66,13 +66,13 @@ In order to run this project you need:
 Example commands:
 
 ```
-  ruby solver.rb
+  ruby main.rb
 ```
 
 test 
 
 ```
-  rspec solver.rb
+  rspec spec/...
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -103,7 +103,7 @@ test
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] 
+- [Create database and connect ruby with it. ] 
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
