@@ -1,0 +1,57 @@
+[
+  {
+    "name": "lolipop",
+    "publish_date": "2010-02-08",
+    "on_spotify": true
+  },
+  {
+    "name": "love me for ever",
+    "publish_date": "2008-08-08",
+    "on_spotify": false
+  },
+  {
+    "name": "gospel music",
+    "publish_date": "2020-09-09",
+    "on_spotify": true
+  },
+  {
+    "name": "sing",
+    "publish_date": "2020-05-04",
+    "on_spotify": false
+  },
+  {
+    "name": "halleluja",
+    "publish_date": "2021-06-15",
+    "on_spotify": false
+  },
+  {
+    "name": "roah",
+    "publish_date": "2020-12-05",
+    "on_spotify": true
+  },
+  {
+    "name": "live",
+    "publish_date": "2020-11-11",
+    "on_spotify": true
+  },
+  {
+    "name": "live",
+    "publish_date": "2020-11-11",
+    "on_spotify": true
+  },
+  {
+    "name": "play",
+    "publish_date": "2020-02-20",
+    "on_spotify": false
+  },
+  {
+    "name": "loud",
+    "publish_date": "2020-02-21",
+    "on_spotify": false
+  },
+  {
+    "name": "praise",
+    "publish_date": "2000-09-19",
+    "on_spotify": true
+  }
+]
