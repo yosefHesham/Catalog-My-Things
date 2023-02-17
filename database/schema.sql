@@ -33,7 +33,6 @@ CREATE TABLE author(
 	last_name varchar(150),
 );
 
-<<<<<<< HEAD
 CREATE TABLE Genres(
   id SERIAL PRIMARY KEY,
   name VARCHAR(100)
@@ -46,7 +45,6 @@ CREATE TABLE Music_Album(
   on_spotify BOOLEAN,
   item_id INT,
   CONSTRAINT item_fk FOREIGN KEY (item_id) REFERENCES Items (id)
-=======
 CREATE TABLE book(
   ID SERIAL PRIMARY KEY,
   publish_date DATE NOT NULL,
@@ -59,5 +57,4 @@ CREATE TABLE book(
   FOREIGN KEY (label_ID) REFERENCES label(ID),
   FOREIGN KEY (author_ID) REFERENCES author(ID),
   FOREIGN KEY(genre_ID) REFERENCES genre(ID)
->>>>>>> eb22764f69c9f5096ca875f6940f701b86c68e22
 );
