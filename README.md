@@ -1,4 +1,4 @@
-﻿# Catalog-My-Things
+# Catalog-My-Things
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 <a name="readme-top"></a>
