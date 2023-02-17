@@ -53,7 +53,7 @@ class Storage
 
     if File.exist?('./music_albums.json')
       file = File.open('./music_albums.json')
-      if file.empty?
+      if file.read.empty?
         album = [obj]
       else
         album = JSON.parse(File.read('./music_albums.json'))
@@ -95,7 +95,7 @@ class Storage
     if File.exist?('./genres.json')
       file = File.open('./genres.json')
 
-      if file.empty?
+      if file.read.empty?
         genre = [obj]
       else
         genre = JSON.parse(File.read('./genres.json'))
