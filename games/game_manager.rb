@@ -10,7 +10,13 @@ class GamesManager
   end
 
   def list_all_games
+    puts ''
+    if @games.empty?
+      puts 'No games recorded yet.'
+      return
+    end
     puts 'This is all the games we have : '
+    puts ''
     @games.each_with_index do |game, index|
       puts "#{index + 1}. multiplayer: #{game.multiplayer} - last_played: #{game.last_played_at}"
     end
@@ -18,7 +24,8 @@ class GamesManager
   end
 
   def add_game
-    puts 'Adding new game'
+    puts 'Adding new game :'
+    puts ''
     print 'publish_date yyyy-mm-dd: '
     publish_date = gets.chomp
     print 'multiplayer (Y/N): '
@@ -28,7 +35,7 @@ class GamesManager
 
     @games << Game.new(publish_date, multiplayer, last_played_at)
     puts 'game created successfully !!!'
-
+    puts ''
     @storage.save_data('games', @games)
   end
 end
