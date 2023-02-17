@@ -1,23 +1,22 @@
 require_relative '../music/music_album'
 
 describe MusicAlbum do
-  before :each do
-    @music_album = MusicAlbum.new('Speak Now', '2010-10-25', false)
-  end
+  context 'when testing music album' do
+    name = 'storm is over'
+    publish_date = '2000-10-10'
+    on_spotify = true
+    music_album = MusicAlbum.new(name, publish_date, on_spotify)
 
-  it 'Should be an instance of the Class' do
-    @music_album.should be_an_instance_of MusicAlbum
-  end
+    it 'return the instance of the class' do
+      expect(music_album).to be_instance_of(MusicAlbum)
+    end
 
-  it 'should return a correct album name' do
-    expect(@music_album.name).to eq('Speak Now')
-  end
+    it 'should return the date instance of the class' do
+      expect(music_album.publish_date).to eq(publish_date)
+    end
 
-  it 'should return a publish date' do
-    expect(@music_album.publish_date).to eq(Date.parse('2010-10-25'))
-  end
-
-  it 'should return false if can be archived method is false' do
-    expect(@music_album.can_be_archived?).to eq(false)
+    it 'should return the onspotify instance of the class' do
+      expect(music_album.on_spotify).to equal true
+    end
   end
 end
